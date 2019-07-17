@@ -1,0 +1,15 @@
+
+all ifo about the movies
+
+MariaDB [movies]> select * from films left join series using (series_id) inner join persona using (film_id) order by film_title;
+
+count actors roles
+
+MariaDB [movies]> select name, count(name) as job_count, group_concat(film_title) as 'film_title' from film_actor where job = 'actor' group by name order by job_count desc limit 1;
+
+
+films series from big to small
+
+MariaDB [movies]> select series_name as name, count(series_id) as parts from series inner join films using(series_id) group by series_name order by parts desc;
+
+
