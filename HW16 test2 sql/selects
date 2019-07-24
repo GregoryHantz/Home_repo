@@ -1,0 +1,8 @@
+
+
+MariaDB [testsql]> select concat('This is ', name, if(gender = 'm', ' he', ' she'), ' has email ', email) from contacts as info;
+
+MariaDB [testsql]> select concat('We have ', count(gender), if(gender = 'm', ' boys!', ' girls!')) as Gender_information from contacts group by gender;
+
+
+
