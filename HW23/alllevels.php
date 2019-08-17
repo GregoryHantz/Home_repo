@@ -11,9 +11,9 @@ class Polygon
 	private $name, $type;
 
 
-	public function __set($name, $value)
+	public function __set($name, $type)
 	{
-		$this->$name = $value;
+		$this->$name = $type;
 	}
 
 	public function get_info ()
@@ -22,9 +22,6 @@ class Polygon
 	}
 }
 
-/**
- * Наследуем класс Animal, расширяем его
- */
 class Rectangle extends Polygon 
 {
 	private $numberofangles;
@@ -58,7 +55,7 @@ class Square extends Rectangle
 	}
 
 	public function get_info() {
-		return parent::get_info() .  ", condition: " . $this->get_condition() . "\n";
+		return parent::get_info() .  ", and condition: " . $this->get_condition() . "\n";
 	}
 }
 
@@ -68,11 +65,11 @@ class Square extends Rectangle
 $big_square = new Square();
 
 
-$big_square->name = 'square';
+$big_square->name = 'rectangle';
 $big_square->type = 'figure';
 
 
 $big_square->set_numberofangles ('4');
-$big_square->set_condition('Sides are equal');
+$big_square->set_condition('sides are equal');
 
 echo $big_square->get_info();
