@@ -37,7 +37,7 @@ interface AddingVehicle
 
  	public function parameters()
  	{
- 		return 'From ' . $this->country . '. Name: ' . $this->name . '. numberOfWheels: ' . $this->numberOfWheels . '. and a max speed ' . $this->maxSpeed;
+ 		return 'From ' . $this->country . ' Name: ' . $this->name . ', number of wheels: ' . $this->numberOfWheels . ' and a max speed at ' . $this->maxSpeed;
  	}
  }
  
@@ -51,7 +51,7 @@ interface AddingVehicle
 
  	 	public function parameters()
  	{
- 		return 'From ' . $this->country . '. Name: ' . $this->name . '. numberOfWheels: ' . $this->numberOfWheels . '. and a max speed ' . $this->maxSpeed;
+ 		return 'From ' . $this->country . ' Name: ' . $this->name . ', number of wheels: ' . $this->numberOfWheels . ' and a max speed at ' . $this->maxSpeed;
  	}
  }
 
@@ -63,7 +63,7 @@ interface AddingVehicle
  	}
 		public function parameters()
  	{
- 		return 'From ' . $this->country . '. Name: ' . $this->name . '. numberOfWheels: ' . $this->numberOfWheels . '. and a max speed ' . $this->maxSpeed;
+ 		return 'From ' . $this->country . ' Name: ' . $this->name . ', number of wheels: ' . $this->numberOfWheels . ' and a max speed at ' . $this->maxSpeed;
  }
 
 }
