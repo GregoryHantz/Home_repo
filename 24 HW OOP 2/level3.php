@@ -75,13 +75,13 @@ $scooter = new Scooter('Japan', 'Suzuki ACCESS125', 2, '40 Mph');
 $quadbike = new Quadbike('USA', 'TRX500FA6', 4, '28 Mph');
 
 echo $motorcycle->parameters();
-$motorcycle->add();
+//$motorcycle->add();
 
 echo $scooter->parameters();
-$scooter->add();
+//$scooter->add();
 
 echo $quadbike->parameters();
-$quadbike->add();
+//$quadbike->add();
 
 
 
