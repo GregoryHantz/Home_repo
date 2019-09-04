@@ -27,34 +27,7 @@ abstract class AbstractModel
 		}
 	}
 
-	/*
-	Две функции ниже - заготовка для ДЗ. Внутри __call будет код из ДЗ25, который заполнит массив $this->_data. В save() этот массив будет использоваться для построения запросов.
 
-	public function __call($method, $args) {
-		//Из MagicArray
-	}
-	public function save() {
-
-		$this->_data = [
-			'name' => $this->name
-		];
-
-		if ($this->id) {
-			$keys = array_keys($this->_data);
-			foreach ($keys as &$key) {
-				$key .= ' = ?';
-			}
-			// var_dump($keys);
-			$sql = 'UPDATE `' . $this->tableName . '` SET ' . implode(',', $keys) . ' WHERE id = ?';
-			$params = array_values($this->_data);
-			$params[] = $this->id;
-
-			// var_dump($sql, $params);die;
-
-			$this->connection->query($sql, $params);
-		}
-	}
-	*/
 }
 
 class AuthorModel extends AbstractModel
@@ -86,11 +59,7 @@ $model = new AuthorModel(Connection::getInstance());
 $model->load(3);
 $model->name .= '(edit)';
 $model->save();
-//var_dump($model);
 
-// $model2 = new AuthorModel(Connection::getInstance());
-// $model2->name = 'Viktor Ivanov';
-// $model2->save();
 
 
 class BookModel extends AbstractModel
