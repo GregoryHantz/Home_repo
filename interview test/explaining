@@ -1,7 +1,0 @@
-To run it use Handler.php;
-Test- abstract class;
-DBHandler, JsonHandler, CSVHandler are Handlers for diff types of files, that extend Test;
-DBConnection - connect to database;
-test.csv, test.json are test files;
-
-
